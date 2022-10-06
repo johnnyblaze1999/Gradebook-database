@@ -1,0 +1,25 @@
+<?php
+include("connect.php");
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Page</title>
+    </head>
+    
+    <body>
+        <h1><strong>Student Page</strong></h1>
+        <div><h2><strong>View Courses:</strong></h2></div>
+        <form action=studentCourse.php method="post">
+            <label for="course">Enter your course number:</label><br>
+            <input type="text" id="course" name="course" placeholder="MATH101" pattern="[a-zA-Z]{4}\d{3}" required><br>
+            <input type='submit' value='Submit'>
+        </form>
+        <h2><strong>Check My Grade:</strong></h2>
+        <form action=studentRecord.php method="post">
+            <label for="cwid">Enter your CWID:</label><br>
+            <input type="text" id="cwid" name="cwid" placeholder="123456789" pattern="\d{9}" required>
+            <input type='submit' value='Submit'>
+        </form>
+    </body>
+</html>

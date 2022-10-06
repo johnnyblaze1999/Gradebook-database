@@ -1,0 +1,27 @@
+<?php
+include("connect.php");
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Professor Page</title>
+    </head>
+    
+    <body>
+        <h1><strong>Professor Page</strong></h1>
+        <div><h2><strong>View titles, classrooms, meeting days and time</strong></h2></div>
+        <form action=professorCheck.php method="post">
+            <label for="ssn">Enter your ssn:</label><br>
+            <input type="text" id="ssn" name="ssn" placeholder="123456789" pattern="\d{3}[ -]?\d{2}[ -]?\d{4}" required>
+            <input type='submit' value='Submit'>
+        </form>
+        <h2><strong>Count students' grade</strong></h2>
+        <form action=professorStudent.php method="post">
+            <label for="course">Enter your course:</label><br>
+            <input type="text" id="course" name="course" placeholder="MATH101" pattern="[a-zA-Z]{4}\d{3}" required><br>
+            <label for="section">Enter your section number:</label><br>
+            <input type="text" id="section" name="section" placeholder="12345" pattern="\d{5}" required><br><br>
+            <input type='submit' value='Submit'>
+        </form>
+    </body>
+</html>
